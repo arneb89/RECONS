@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MathLib</name>
+    </assembly>
+    <members>
+        <member name="T:MathLib.Spline31DCyclic">
+            <summary>
+            The class for 1D-interpolation by cubic spline with cyclic boundary conditions;  
+            </summary>
+        </member>
+        <member name="T:MathLib.Spline31D">
+            <summary>
+            Class is assigned for interpolation of tabulated function by cubic spline;
+            </summary>
+        </member>
+        <member name="M:MathLib.Spline31D.#ctor(System.Double[],System.Double[])">
+            <summary>
+            Constructor function of the class;
+            </summary>
+            <param name="x">x - array of abcissa data;</param>
+            <param name="y">y - array of ordinate data.</param>
+        </member>
+        <member name="M:MathLib.Spline31D.Interp(System.Double)">
+            <summary>
+            Returns value of function in point x0;
+            </summary>
+            <param name="x0"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MathLib.Spline31D.InterpD1(System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="x0"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MathLib.Spline31D.InterpD2(System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="x0"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MathLib.Spline31D.InterpD3(System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="x0"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MathLib.Spline31D.masA">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MathLib.Spline31D.masB">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MathLib.Spline31D.masC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MathLib.Spline31D.masD">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MathLib.Spline31D.masD0">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MathLib.Spline31D.masD1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MathLib.Spline31D.masD2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MathLib.Spline31D.masD3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MathLib.Spline31DCyclic.#ctor(System.Double[],System.Double[])">
+            <summary>
+            Constructor of the class;
+            </summary>
+            <param name="x">x - array of x values;</param>
+            <param name="y">y - array of y values with y[0]=y[N-1], where N - length of the y- and x-arrays;</param>
+        </member>
+        <member name="T:MathLib.LinAlgebra.Householder">
+            <summary>
+            P = I - beta * v * vTr,
+            where I(0:n-1, 0:n-1) - identity matrix;
+            v(0: n-1) - some vector;
+            beta = 2 / (vTr * vTr).
+            P * x = ||x||_2 * e_1,
+            where e_1 = (1, 1:n-1).
+            </summary>
+        </member>
+        <member name="M:MathLib.Cholesky.#ctor(MathLib.Matrix)">
+            <summary>
+            Constructor of the class. Conduct Cholesky decomposition of matrix a.
+            </summary>
+            <param name="a">A positive-defined symmetric matrix.</param>
+        </member>
+        <member name="P:MathLib.Cholesky.L">
+            <summary>
+            Returns triangle matrix L; 
+            </summary>
+        </member>
+        <member name="T:MathLib.Solve.HalfDivideMethod">
+            <summary>
+            This class provides the half diviation method for searching the root of some equation.
+            </summary>
+        </member>
+        <member name="M:MathLib.Solve.HalfDivideMethod.FindMinPoint(MathLib.Solve.SlvOneVariableFunction,System.Double,System.Double,System.Double)">
+            <summary>
+            The method for searching the root of equation f(x) = 0;
+            </summary>
+            <param name="func"> function;</param>
+            <param name="leftBound"> left bound;</param>
+            <param name="rightBound"> right bound;</param>
+            <param name="err"> error of root searching.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MathLib.Spline32D.#ctor(System.Double[],System.Double[],System.Double[][])">
+            <summary>
+            Constructor of the class.
+            </summary>
+            <param name="x">array of x-data</param>
+            <param name="y">array of y-data</param>
+            <param name="f">array of function values. First index represents x-data; second index represents y-data.</param>
+        </member>
+        <member name="T:MathLib.Counter">
+            <summary>
+            Этот класс предоставляет "секундомер" для приложений,
+            требующих точного измерения времени
+            </summary>
+        </member>
+        <member name="T:MathLib.Basic">
+            <summary>
+            Basic matrix and vector operations.
+            </summary>
+        </member>
+        <member name="T:MathLib.Matrix">
+            <summary>
+            This is a matrix
+            </summary>
+        </member>
+        <member name="T:MathLib.IMatrix`1">
+            <summary>
+            Interface for a Matrix
+            </summary>
+        </member>
+        <member name="M:MathLib.IMatrix`1.CopyToRectArray">
+            <summary>
+             Copy the elements of this matrix to a rectangular array.
+            </summary>
+            <returns>A rectangular array.</returns>
+        </member>
+        <member name="M:MathLib.IMatrix`1.CopyToJaggedArray">
+            <summary>
+             Copy the elements of this matrix to a jagged array.
+            </summary>
+            <returns>A jagged array</returns>
+        </member>
+        <member name="P:MathLib.IMatrix`1.RowCount">
+            <summary>
+            Returns the number of rows.
+            </summary>
+        </member>
+        <member name="P:MathLib.IMatrix`1.ColumnCount">
+            <summary>
+            Returns the number of columns.
+            </summary>
+        </member>
+        <member name="P:MathLib.IMatrix`1.Item(System.Int32,System.Int32)">
+            <summary>
+            Gets or set the value of an element of this Matrix.
+            </summary>
+            <param name="row">The row value (zero-based).</param>
+            <param name="column">The column value (zero-based).</param>
+            <returns>The Matrix element at (row, column).</returns>
+        </member>
+        <member name="P:MathLib.IMatrix`1.Item(System.Int32)">
+            <summary>
+            Gets or set the value of an element of the first column of this Matrix.
+            </summary>
+            <param name="row">The row value (zero-based).</param>
+            <returns>The Matrix element at (row, 0)</returns>
+        </member>
+        <member name="M:MathLib.Matrix.Sp">
+            <summary>
+            Gets trace of the matrix;
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MathLib.Matrix.Max">
+            <summary>
+            Gets value of maximal element of the matrix;
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MathLib.Matrix.Min">
+            <summary>
+            Gets value of minimal element of the matrix;
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MathLib.Matrix.CopyToRectArray">
+            <summary>
+             Copy the elements of this matrix to a rectangular array.
+            </summary>
+            <returns>A rectangular array.</returns>
+        </member>
+        <member name="M:MathLib.Matrix.CopyToJaggedArray">
+            <summary>
+             Copy the elements of this matrix to a jagged array.
+            </summary>
+            <returns>A jagged array.</returns>
+        </member>
+        <member name="P:MathLib.Matrix.Item(System.Int32,System.Int32)">
+            <summary>
+            Gets or set the value of an element of this Matrix.
+            </summary>
+            <param name="i">The row value (zero-based).</param>
+            <param name="j">The column value (zero-based).</param>
+            <returns>The Matrix element at (i, j).</returns>
+        </member>
+        <member name="P:MathLib.Matrix.Item(System.Int32)">
+            <summary>
+            Gets or set the value of an element of the first row of this Matrix.
+            </summary>
+            <param name="i">The row value (zero-based).</param>
+            <returns>The Matrix element at (i, 0).</returns>
+        </member>
+        <member name="M:MathLib.Spline32DChaos.#ctor(System.Double[],System.Double[],System.Double[])">
+            <summary>
+            Constructor of the class.
+            </summary>
+            <param name="x">x - array of x coordinates;</param>
+            <param name="y">y - array of y coordinates;</param>
+            <param name="r">r - array of values of the function.</param>
+        </member>
+        <member name="M:MathLib.Spline32DChaos.Interp(System.Double,System.Double)">
+            <summary>
+            Method for interpolation the function in the point (x0, y0).
+            </summary>
+            <param name="x0">x0 - x coordinate;</param>
+            <param name="y0">y0 - y coordinate. </param>
+            <returns></returns>
+        </member>
+        <member name="M:MathLib.LinAlgebra.QRDecomp.#ctor(MathLib.Matrix)">
+            <summary>
+            Construct the QR decomposition of a matrix.
+            </summary>
+            <param name="a">The matrix that will be decomposed.</param>
+        </member>
+        <member name="P:MathLib.LinAlgebra.QRDecomp.QTr">
+            <summary>
+            Returns the matrix QTr;
+            </summary>
+        </member>
+        <member name="P:MathLib.LinAlgebra.QRDecomp.R">
+            <summary>
+            Returns the matrix R;
+            </summary>
+        </member>
+        <member name="T:MathLib.LUDecompositor">
+            <summary>
+            Class for LU-decomposition of squre matrix and solving of system of linear 
+            equations using LU-decomposition of matrix of this system.
+            </summary>
+        </member>
+        <member name="M:MathLib.LUDecompositor.#ctor(MathLib.Matrix)">
+            <summary>
+            Constructor of the class. Conduct LU-decomposition of matrix a.
+            </summary>
+            <param name="a">a - decomposed matrix.</param>
+        </member>
+        <member name="M:MathLib.LUDecompositor.Solve(MathLib.Matrix)">
+            <summary>
+            Conducts solving of lineal system equation ax=b and returns solution-vector x.
+            </summary>
+            <param name="b">b - vector of free parameters in the right-hand part of equation ax=b.</param>
+            <returns></returns>
+        </member>
+        <member name="T:MathLib.Optimization.GaussNewton">
+            <summary>
+            This class provides methods for solving of minimization problem 0.5*||f(x)||^2 -> min using
+            Gauss-Newton algorithm (||x|| is the eucleadian norm of vector x).
+            </summary>
+        </member>
+        <member name="M:MathLib.Optimization.GaussNewton.FindMinPoint(MathLib.Optimization.OptJacobyMatrix,MathLib.Optimization.OptVectorFunction,MathLib.Matrix,System.Double)">
+            <summary>
+            Returns the vector of the minimum of the function 0.5*||f(x)||^2.
+            </summary>
+            <param name="getJacoby">getJacoby - link to the function, that returns Jacoby matrix for the function f;</param>
+            <param name="func">func - link to the function, that returns the function f;</param>
+            <param name="X0">X0 - initial vector;</param>
+            <param name="error">error - error of the searching of minimum.</param>
+            <returns></returns>
+        </member>
+        <member name="T:MathLib.PolynomInterpolator">
+            <summary>
+            The class for polinomial interpolation of functions of one variable;
+            </summary>
+        </member>
+        <member name="M:MathLib.PolynomInterpolator.#ctor(System.Double[],System.Double[])">
+            <summary>
+            Constructor of the class. Finds coefficients of interpolation polynome of
+            order is equal to number of data points.
+            </summary>
+            <param name="x">x - grid of interpolation points;</param>
+            <param name="y">y - grid of values of the function in the points x[i]. y is 
+            changed after working this function.</param>
+        </member>
+        <member name="M:MathLib.PolynomInterpolator.Interp(System.Double)">
+            <summary>
+            Gets value of interpolation fuction in the point x;
+            </summary>
+            <param name="x">x - point of interpolation.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

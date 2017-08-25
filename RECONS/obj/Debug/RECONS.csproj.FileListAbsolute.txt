@@ -1,0 +1,7 @@
+D:\RECONS\RECONS\obj\Debug\ResolveAssemblyReference.cache
+D:\RECONS\RECONS\bin\Debug\RECONS.exe
+D:\RECONS\RECONS\bin\Debug\RECONS.pdb
+D:\RECONS\RECONS\obj\Debug\RECONS.exe
+D:\RECONS\RECONS\obj\Debug\RECONS.pdb
+D:\RECONS\RECONS_BIN\RECONS.exe
+D:\RECONS\RECONS_BIN\RECONS.pdb
